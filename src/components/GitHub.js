@@ -27,10 +27,10 @@ const GitHub = ({ kullaniciRepolariniGetir, yukleniyor, repolar, hata }) => {
         )}
         <ul>
           {repoListesi.map(
-            ({ name, url, language, stargazers_count, watchers_count }) => (
+            ({ name, html_url, language, stargazers_count, forks_count }) => (
               <li key={name}>
-                <a target='_blank' href={url} rel='noopener noreferrer'>
-                  {name}/{language}, {stargazers_count}⭐️, {watchers_count}👀
+                <a target='_blank' href={html_url} rel='noopener noreferrer'>
+                  {name}/{language}, {stargazers_count}⭐️, {forks_count}🍴
                 </a>
               </li>
             )
